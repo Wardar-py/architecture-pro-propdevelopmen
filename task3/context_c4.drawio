@@ -1,0 +1,44 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2">
+  <diagram id="CIh5IqfLSpv8MCICTYrh" name="Контекст Умный дом">
+    <mxGraphModel dx="3205" dy="1554" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aqGngZ4Owaw3DsTEtw3N-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;" value="PropDevelopment" vertex="1">
+          <mxGeometry height="200" width="300" x="434" y="314" as="geometry" />
+        </mxCell>
+        <mxCell id="aqGngZ4Owaw3DsTEtw3N-2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=12;" value="[Software System]" vertex="1">
+          <mxGeometry height="30" width="200" x="490" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="aqGngZ4Owaw3DsTEtw3N-3" parent="1" style="html=1;fontSize=14;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;" value="Собственник" vertex="1">
+          <mxGeometry height="150" width="150" x="-80" y="339" as="geometry" />
+        </mxCell>
+        <mxCell id="aqGngZ4Owaw3DsTEtw3N-4" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=11;" value="[Person]" vertex="1">
+          <mxGeometry height="20" width="100" x="-55" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="aqGngZ4Owaw3DsTEtw3N-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#8C8496;strokeColor=#736782;fontColor=#ffffff;" value="Платформа Умного дома" vertex="1">
+          <mxGeometry height="120" width="200" x="1060" y="354" as="geometry" />
+        </mxCell>
+        <mxCell id="aqGngZ4Owaw3DsTEtw3N-6" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=11;" value="[Software System]" vertex="1">
+          <mxGeometry height="20" width="150" x="1085" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="aqGngZ4Owaw3DsTEtw3N-7" edge="1" parent="1" source="aqGngZ4Owaw3DsTEtw3N-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="aqGngZ4Owaw3DsTEtw3N-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aqGngZ4Owaw3DsTEtw3N-12" connectable="0" parent="aqGngZ4Owaw3DsTEtw3N-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Использует мобильное приложение&lt;br&gt;для управления домофоном/шлагбаумом" vertex="1">
+          <mxGeometry relative="1" x="-0.1127" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aqGngZ4Owaw3DsTEtw3N-9" edge="1" parent="1" source="aqGngZ4Owaw3DsTEtw3N-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="aqGngZ4Owaw3DsTEtw3N-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aqGngZ4Owaw3DsTEtw3N-11" connectable="0" parent="aqGngZ4Owaw3DsTEtw3N-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="API вызовы команд управления&lt;br&gt;и синхронизации прав доступа" vertex="1">
+          <mxGeometry relative="1" x="-0.1933" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
