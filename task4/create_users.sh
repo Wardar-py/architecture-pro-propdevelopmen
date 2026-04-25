@@ -35,8 +35,3 @@ kubectl create serviceaccount "cluster-operator" -n kube-system --dry-run=client
 kubectl create serviceaccount "security-admin" -n kube-system --dry-run=client -o yaml | kubectl apply -f -
 
 echo "ServiceAccounts созданы."
-
-# Примечание: для реальной аутентификации внешних пользователей потребуется настройка
-# сертификатов или OIDC. В учебных целях можно использовать токены ServiceAccount.
-# Для получения токена выполните:
-# kubectl create token <serviceaccount> -n <namespace>
