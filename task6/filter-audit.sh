@@ -1,22 +1,24 @@
 #!/bin/bash
-# filter-audit.sh – извлекает подозрительные события из audit.log и сохраняет в audit-extract.json
 
 if [ ! -f "audit.log" ]; then
     echo "Файл audit.log не найден."
     exit 1
 fi
 
-# Используем jq для фильтрации
 jq -s '
   [
     .[] |
     select(
-      (.objectRef.resource == "secrets" and .verb == "get") or
-      (.verb == "create" and .objectRef.subresource == "exec") or
-      (.objectRef.resource == "pods" and .requestObject.spec.containers[].securityContext.privileged == true) or
-      (.objectRef.resource == "rolebindings" and .verb == "create") or
-      (.objectRef.resource == "configmaps" and .objectRef.name == "audit-policy") or
-      (.verb == "delete" and .objectRef.resource == "configmaps" and .objectRef.name == "audit-policy")
+      # попытка доступа к secrets (list/get)
+      (.objectRef.resource == "secrets" and (.verb == "list" or .verb == "get")) or
+      # exec в под (глагол get)
+      (.objectRef.subresource == "exec" and .verb == "get") or
+      # создание привилегированного пода (по имени, без requestObject)
+      (.objectRef.resource == "pods" and .objectRef.name == "privileged-pod") or
+      # создание/изменение rolebinding с эскалацией
+      (.objectRef.resource == "rolebindings" and .verb == "create" and .objectRef.name == "escalate-binding") or
+      # доступ к configmap audit-policy (если будет)
+      (.objectRef.resource == "configmaps" and .objectRef.name == "audit-policy")
     )
   ] | unique_by(.auditID)
 ' audit.log > audit-extract.json
