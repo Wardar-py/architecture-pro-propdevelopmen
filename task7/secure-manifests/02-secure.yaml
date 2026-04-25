@@ -5,17 +5,18 @@ metadata:
   namespace: audit-zone
 spec:
   containers:
-    - name: nginx
-      image: nginx
-      volumeMounts:
-        - mountPath: /data
-          name: data-volume
-      securityContext:
-        runAsNonRoot: true
-        readOnlyRootFilesystem: true
-        runAsUser: 1000
-        capabilities:
-          drop: ["ALL"]
+  - name: nginx
+    image: nginx
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop: ["ALL"]
+      runAsNonRoot: true
+      seccompProfile:
+        type: RuntimeDefault
+    volumeMounts:
+    - name: data
+      mountPath: /data
   volumes:
-    - name: data-volume
-      emptyDir: {}
+  - name: data
+    emptyDir: {}

@@ -5,11 +5,13 @@ metadata:
   namespace: audit-zone
 spec:
   containers:
-    - name: nginx
-      image: nginx
-      securityContext:
-        runAsNonRoot: true
-        readOnlyRootFilesystem: true
-        runAsUser: 1000
-        capabilities:
-          drop: ["ALL"]
+  - name: nginx
+    image: nginx
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop: ["ALL"]
+      runAsNonRoot: true
+      runAsUser: 1000
+      seccompProfile:
+        type: RuntimeDefault

@@ -44,14 +44,6 @@ chmod +x verify-admission.sh validate-security.sh
 ./validate-security.sh  # Ожидается три PASS
 ```
 
-### 5. Аудит
-
-Политика аудита (audit-policy.yaml) может быть применена к API-серверу для логирования событий, связанных с подами.
-
-```bash
-minikube start --extra-config=apiserver.audit-policy-file=/etc/kubernetes/audit-policy.yaml ...
-```
-
 ### Ожидаемый результат
 
 - Insecure поды не создаются.

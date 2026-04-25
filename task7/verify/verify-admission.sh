@@ -1,8 +1,7 @@
 #!/bin/bash
-# Проверка, что admission контроллер (PodSecurity или Gatekeeper) блокирует insecure поды
 
 echo "=== Проверка блокировки привилегированного пода ==="
-kubectl apply -f ../insecure-manifests/01-privileged-pod.yaml --dry-run=server 2>&1 | grep -q "denied"
+kubectl apply -f ../insecure-manifests/01-privileged-pod.yaml --dry-run=server 2>&1 | grep -q "Forbidden"
 if [ $? -eq 0 ]; then
     echo "PASS: privileged pod rejected"
 else
@@ -10,7 +9,7 @@ else
 fi
 
 echo "=== Проверка блокировки hostPath ==="
-kubectl apply -f ../insecure-manifests/02-hostpath-pod.yaml --dry-run=server 2>&1 | grep -q "denied"
+kubectl apply -f ../insecure-manifests/02-hostpath-pod.yaml --dry-run=server 2>&1 | grep -q "Forbidden"
 if [ $? -eq 0 ]; then
     echo "PASS: hostPath pod rejected"
 else
@@ -18,7 +17,7 @@ else
 fi
 
 echo "=== Проверка блокировки root пользователя ==="
-kubectl apply -f ../insecure-manifests/03-root-user-pod.yaml --dry-run=server 2>&1 | grep -q "denied"
+kubectl apply -f ../insecure-manifests/03-root-user-pod.yaml --dry-run=server 2>&1 | grep -q "Forbidden"
 if [ $? -eq 0 ]; then
     echo "PASS: root user pod rejected"
 else
