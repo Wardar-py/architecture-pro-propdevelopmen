@@ -1,0 +1,166 @@
+[
+  {
+    "kind": "Event",
+    "apiVersion": "audit.k8s.io/v1",
+    "level": "Metadata",
+    "auditID": "2270aa0a-6ae0-4c6e-8e59-44a7d1cc8e99",
+    "stage": "RequestReceived",
+    "requestURI": "/api/v1/namespaces/kube-system/secrets?limit=500",
+    "verb": "list",
+    "user": {
+      "username": "minikube-user",
+      "groups": [
+        "system:masters",
+        "system:authenticated"
+      ],
+      "extra": {
+        "authentication.kubernetes.io/credential-id": [
+          "X509SHA256=a38797fef739f1450e1063d4151ddb7f6fc05a2ac4a8eb35c473a1664437bb0c"
+        ]
+      }
+    },
+    "sourceIPs": [
+      "192.168.49.1"
+    ],
+    "userAgent": "kubectl/v1.35.1 (darwin/arm64) kubernetes/8fea90b",
+    "objectRef": {
+      "resource": "secrets",
+      "namespace": "kube-system",
+      "apiVersion": "v1"
+    },
+    "requestReceivedTimestamp": "2026-04-25T12:34:25.319459Z",
+    "stageTimestamp": "2026-04-25T12:34:25.319459Z"
+  },
+  {
+    "kind": "Event",
+    "apiVersion": "audit.k8s.io/v1",
+    "level": "Metadata",
+    "auditID": "5033cb9d-f147-45a8-ab83-2d88da811270",
+    "stage": "RequestReceived",
+    "requestURI": "/api/v1/namespaces/kube-system/pods/coredns-7d764666f9-kp5n9/exec?command=cat&command=%2Fetc%2Fresolv.conf&container=coredns&stderr=true&stdout=true",
+    "verb": "get",
+    "user": {
+      "username": "minikube-user",
+      "groups": [
+        "system:masters",
+        "system:authenticated"
+      ],
+      "extra": {
+        "authentication.kubernetes.io/credential-id": [
+          "X509SHA256=a38797fef739f1450e1063d4151ddb7f6fc05a2ac4a8eb35c473a1664437bb0c"
+        ]
+      }
+    },
+    "sourceIPs": [
+      "192.168.49.1"
+    ],
+    "userAgent": "kubectl/v1.35.1 (darwin/arm64) kubernetes/8fea90b",
+    "objectRef": {
+      "resource": "pods",
+      "namespace": "kube-system",
+      "name": "coredns-7d764666f9-kp5n9",
+      "apiVersion": "v1",
+      "subresource": "exec"
+    },
+    "requestReceivedTimestamp": "2026-04-25T12:34:25.515173Z",
+    "stageTimestamp": "2026-04-25T12:34:25.515173Z"
+  },
+  {
+    "kind": "Event",
+    "apiVersion": "audit.k8s.io/v1",
+    "level": "Metadata",
+    "auditID": "8884f173-1e51-42bc-9b38-84939313eab0",
+    "stage": "RequestReceived",
+    "requestURI": "/api/v1/namespaces/secure-ops/pods/privileged-pod",
+    "verb": "get",
+    "user": {
+      "username": "minikube-user",
+      "groups": [
+        "system:masters",
+        "system:authenticated"
+      ],
+      "extra": {
+        "authentication.kubernetes.io/credential-id": [
+          "X509SHA256=a38797fef739f1450e1063d4151ddb7f6fc05a2ac4a8eb35c473a1664437bb0c"
+        ]
+      }
+    },
+    "sourceIPs": [
+      "192.168.49.1"
+    ],
+    "userAgent": "kubectl/v1.35.1 (darwin/arm64) kubernetes/8fea90b",
+    "objectRef": {
+      "resource": "pods",
+      "namespace": "secure-ops",
+      "name": "privileged-pod",
+      "apiVersion": "v1"
+    },
+    "requestReceivedTimestamp": "2026-04-25T12:34:25.408596Z",
+    "stageTimestamp": "2026-04-25T12:34:25.408596Z"
+  },
+  {
+    "kind": "Event",
+    "apiVersion": "audit.k8s.io/v1",
+    "level": "Metadata",
+    "auditID": "a4626894-6fbd-45fd-b4ea-5651f61c2595",
+    "stage": "RequestReceived",
+    "requestURI": "/api/v1/namespaces/secure-ops/pods/privileged-pod",
+    "verb": "get",
+    "user": {
+      "username": "system:node:minikube",
+      "groups": [
+        "system:nodes",
+        "system:authenticated"
+      ],
+      "extra": {
+        "authentication.kubernetes.io/credential-id": [
+          "X509SHA256=bcc929d9ee1d33c9106f563b6a6262875d115f63a3490d80fa3be76e21418fb1"
+        ]
+      }
+    },
+    "sourceIPs": [
+      "192.168.49.2"
+    ],
+    "userAgent": "kubelet/v1.35.0 (linux/arm64) kubernetes/6645204",
+    "objectRef": {
+      "resource": "pods",
+      "namespace": "secure-ops",
+      "name": "privileged-pod",
+      "apiVersion": "v1"
+    },
+    "requestReceivedTimestamp": "2026-04-25T12:33:09.821504Z",
+    "stageTimestamp": "2026-04-25T12:33:09.821504Z"
+  },
+  {
+    "kind": "Event",
+    "apiVersion": "audit.k8s.io/v1",
+    "level": "Metadata",
+    "auditID": "cdba152e-38e6-4ef6-88f3-847ef2921785",
+    "stage": "RequestReceived",
+    "requestURI": "/api/v1/namespaces/kube-system/secrets?limit=500",
+    "verb": "list",
+    "user": {
+      "username": "minikube-user",
+      "groups": [
+        "system:masters",
+        "system:authenticated"
+      ],
+      "extra": {
+        "authentication.kubernetes.io/credential-id": [
+          "X509SHA256=a38797fef739f1450e1063d4151ddb7f6fc05a2ac4a8eb35c473a1664437bb0c"
+        ]
+      }
+    },
+    "sourceIPs": [
+      "192.168.49.1"
+    ],
+    "userAgent": "kubectl/v1.35.1 (darwin/arm64) kubernetes/8fea90b",
+    "objectRef": {
+      "resource": "secrets",
+      "namespace": "kube-system",
+      "apiVersion": "v1"
+    },
+    "requestReceivedTimestamp": "2026-04-25T12:34:25.352662Z",
+    "stageTimestamp": "2026-04-25T12:34:25.352662Z"
+  }
+]
